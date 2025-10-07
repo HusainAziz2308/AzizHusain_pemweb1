@@ -14,23 +14,22 @@
     <div>
         <h1>FORMULIR SURVEY DASAR</h1>
             <form action="form.html" method="get">
-                Nama : <br>
+                Nama : 
                 <input type="text" name="nama" placeholder="Masukkan nama lengkap" size="30" maxlength="30" required>
                 <br><br>
-                Pasword : <br>
+                Pasword : 
                 <input type="password" name="password" placeholder="Masukkan password" size="30" maxlength="30" required>
                 <br><br>
-                Jenis kelamin : <br>
+                Jenis kelamin : 
                 <input type="radio" name="jk" value="Laki-laki" checked> Laki-laki
                 <input type="radio" name="jk" value="Perempuan"> Perempuan
-                required
                 <br><br>
-                Hobi : <br>
+                Hobi :
                 <input type="checkbox" name="hobi" value="Membaca"> Membaca
                 <input type="checkbox" name="hobi" value="Coding"> Coding
                 <input type="checkbox" name="hobi" value="Traveling"> Traveling
                 <input type="checkbox" name="hobi" value="Olahraga"> Olahraga
-                required
+                
                 <br><br>
                 Asal Kota :
                 <select name="kota">
@@ -44,8 +43,10 @@
                 Komentar : <br>
                 <textarea 
                 name="komentar"
-                cols="30" rows="5" 
-                placeholder="Masukkan komentar"></textarea>    
+                cols="30" 
+                rows="5" 
+                placeholder="Masukkan komentar" 
+                required></textarea>    
                 <br>
                 <input type="submit" value="Kirim">
             </form>
