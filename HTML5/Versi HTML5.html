@@ -3,10 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modifikasi Form Survey Dasar - HTML5 Semantik</title>
+    <title>HTML5</title>
     <style>
        body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            padding: 10px;;
+            border-radius: 8px;
+            color: white;
+            background-color: #00a2ff;
+        }
+        section {
+            margin-bottom: 20px;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
         }
     </style>
 </head>
@@ -21,30 +39,40 @@
         <section>
             
             <form action="submit_data.html" method="POST">
+                <table>
+                    <tr>
+                        <td>Nama : </td>
+                        <td>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" size="30" maxlength="30" required autofocus>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password : </td>
+                        <td>
+                            <input type="password" id="password" name="password" placeholder="Masukkan password" size="30" maxlength="30" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Janji Temu : </td>
+                        <td>
+                            <input type="datetime-local" id="tanggal_janji" name="tanggal_janji">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jenis kelamin : </td>
+                        <td>
+                            <input type="radio" id="jk_l" name="jk" value="Laki-laki" checked> <label for="jk_l">Laki-laki</label>
+                            <input type="radio" id="jk_p" name="jk" value="Perempuan"> <label for="jk_p">Perempuan</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hobi : </td>
+                        <td>
+                            <input type="checkbox" id="hobi_baca" name="hobi[]" value="Membaca"> <label for="hobi_baca">Membaca</label>
+                            <input type="checkbox" id="hobi_code" name="hobi[]" value="Coding"> <label for="hobi_code">Coding</label>
+                            <input type="checkbox" id="hobi_travel" name="hobi[]" value="Traveling"> <label for="hobi_travel">Traveling</label>
+                            <input type="checkbox" id="hobi_olahraga" name="hobi[]" value="Olahraga"> <label for="hobi_olahraga">Olahraga</label>
                 
-                Nama : 
-                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" size="30" maxlength="30" required autofocus>
-                <br><br>
-
-                Password :
-                <input type="password" id="password" name="password" placeholder="Masukkan password" size="30" maxlength="30" required>
-                <br><br>
-
-                Tanggal Janji Temu :
-                <input type="datetime-local" id="tanggal_janji" name="tanggal_janji">
-                <br><br>
-
-                Jenis kelamin : 
-                <input type="radio" id="jk_l" name="jk" value="Laki-laki" checked> <label for="jk_l">Laki-laki</label>
-                <input type="radio" id="jk_p" name="jk" value="Perempuan"> <label for="jk_p">Perempuan</label>
-                <br><br>
-                
-                Hobi :
-                <input type="checkbox" id="hobi_baca" name="hobi[]" value="Membaca"> <label for="hobi_baca">Membaca</label>
-                <input type="checkbox" id="hobi_code" name="hobi[]" value="Coding"> <label for="hobi_code">Coding</label>
-                <input type="checkbox" id="hobi_travel" name="hobi[]" value="Traveling"> <label for="hobi_travel">Traveling</label>
-                <input type="checkbox" id="hobi_olahraga" name="hobi[]" value="Olahraga"> <label for="hobi_olahraga">Olahraga</label>
-                <br><br>
 
                 Asal Kota :
                 <select name="kota" required>
@@ -56,7 +84,7 @@
                     <option value="Semarang">Semarang</option>
                     <option value="Lainnya">Lainnya</option>
                 </select>
-                <br><br>
+                <br>
 
                 Komentar : <br>
                 <textarea 
@@ -68,6 +96,7 @@
                 <br>
 
                 <input type="submit" value="Kirim">
+                </table>
             </form>
         </section>
 
