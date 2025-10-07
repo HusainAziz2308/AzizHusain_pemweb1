@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifikasi Form Survey Dasar - HTML5 Semantik</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>FORMULIR SURVEY DASAR</h1>
+    </header>
+
+    <main>
+        
+        <section>
+            
+            <form action="submit_data.html" method="POST">
+                
+                <label for="nama">Nama :</label> 
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" size="30" maxlength="30" required autofocus>
+                <br><br>
+
+                <label for="password">Password :</label> 
+                <input type="password" id="password" name="password" placeholder="Masukkan password" size="30" maxlength="30" required>
+                <br><br>
+
+                <label for="tanggal_janji">Tanggal Janji Temu :</label>
+                <input type="datetime-local" id="tanggal_janji" name="tanggal_janji">
+                <br><br>
+
+                Jenis kelamin : 
+                <input type="radio" id="jk_l" name="jk" value="Laki-laki" checked> <label for="jk_l">Laki-laki</label>
+                <input type="radio" id="jk_p" name="jk" value="Perempuan"> <label for="jk_p">Perempuan</label>
+                <br><br>
+                
+                Hobi :
+                <input type="checkbox" id="hobi_baca" name="hobi[]" value="Membaca"> <label for="hobi_baca">Membaca</label>
+                <input type="checkbox" id="hobi_code" name="hobi[]" value="Coding"> <label for="hobi_code">Coding</label>
+                <input type="checkbox" id="hobi_travel" name="hobi[]" value="Traveling"> <label for="hobi_travel">Traveling</label>
+                <input type="checkbox" id="hobi_olahraga" name="hobi[]" value="Olahraga"> <label for="hobi_olahraga">Olahraga</label>
+                <br><br>
+
+                Asal Kota :
+                <select name="kota" required>
+                    <option value="">-- Pilih Kota --</option>
+                    <option value="Jakarta">Jakarta</option>
+                    <option value="Bandung">Bandung</option>
+                    <option value="Surabaya">Surabaya</option>
+                    <option value="Yogyakarta">Yogyakarta</option>
+                    <option value="Semarang">Semarang</option>
+                </select>
+                <br><br>
+
+                Komentar : <br>
+                <textarea 
+                name="komentar"
+                cols="30" 
+                rows="5" 
+                placeholder="Masukkan komentar" 
+                required></textarea>    
+                <br>
+
+                <input type="submit" value="Kirim">
+            </form>
+        </section>
+
+        <section>
+            <h2>Jadwal Dokter</h2>
+            <article>
+                <table border="1" bordercolor="black" cellpadding="10" cellspacing="0">
+                    <tr>
+                        <td>Hari</td>
+                        <td>Jam Praktik</td>
+                    </tr>
+                    <tr>
+                        <td>Senin</td>
+                        <td>08:00 - 12:00</td>
+                    </tr>
+                    <tr>
+                        <td>Rabu</td>
+                        <td>13:00 - 17:00</td>
+                    </tr>
+                    <tr>
+                        <td>Jumat</td>
+                        <td>09:00 - 11:00</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+
+        <section>
+            <h2>Langkah Pendaftaran</h2>
+            <ul>
+                <li>Isi formulir dengan lengkap</li>
+                <li>Klik tombol "Kirim"</li>
+                <li>Tunggu konfirmasi melalui email</li>
+                <li>Datang ke klinik sesuai jadwal yang telah ditentukan</li>
+            </ul>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>Hak Cipta &copy; 2025 Husain Aziz Al Rosyid</p>
+    </footer>
+
+</body>
+</html>
