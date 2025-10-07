@@ -6,46 +6,69 @@
     <title>Husain Aziz al Rosyid</title>
 </head>
 <body>
-    <h1>FORMULIR SURVEY DASAR</h1>
     <div>
-    <form action="form.html" method="get">
-        Nama : <br>
-        <input type="text" name="nama" placeholder="Masukkan nama lengkap" size="30" maxlength="30" required>
-        <br>
-        Pasword : <br>
-        <input type="password" name="password" placeholder="Masukkan password" size="30" maxlength="30" required>
-        <br>
-        jenis kelamin : <br>
-        <input type="radio" name="jk" value="Laki-laki" checked> Laki-laki
-        <input type="radio" name="jk" value="Perempuan"> Perempuan
-        <br>
-        hobi : <br>
-        <input type="checkbox" name="hobi" value="Membaca"> Membaca
-        <input type="checkbox" name="hobi" value="Coding"> Coding
-        <input type="checkbox" name="hobi" value="Traveling"> Traveling
-        <input type="checkbox" name="hobi" value="Olahraga"> Olahraga
-        <br>
-    </form>
+        <h1>FORMULIR SURVEY DASAR</h1>
+            <form action="form.html" method="get">
+                Nama : <br>
+                <input type="text" name="nama" placeholder="Masukkan nama lengkap" size="30" maxlength="30" required>
+                <br><br>
+                Pasword : <br>
+                <input type="password" name="password" placeholder="Masukkan password" size="30" maxlength="30" required>
+                <br><br>
+                Jenis kelamin : <br>
+                <input type="radio" name="jk" value="Laki-laki" checked> Laki-laki
+                <input type="radio" name="jk" value="Perempuan"> Perempuan
+                required
+                <br><br>
+                Hobi : <br>
+                <input type="checkbox" name="hobi" value="Membaca"> Membaca
+                <input type="checkbox" name="hobi" value="Coding"> Coding
+                <input type="checkbox" name="hobi" value="Traveling"> Traveling
+                <input type="checkbox" name="hobi" value="Olahraga"> Olahraga
+                required
+                <br><br>
+                Asal Kota :
+                <select name="kota">
+                    <option value="Jakarta">Jakarta</option>
+                    <option value="Bandung">Bandung</option>
+                    <option value="Surabaya">Surabaya</option>
+                    <option value="Yogyakarta">Yogyakarta</option>
+                    <option value="Semarang">Semarang</option>
+                </select required>
+                <br><br>
+                Komentar : <br>
+                <textarea 
+                name="komentar"
+                cols="30" rows="5" 
+                placeholder="Masukkan komentar"></textarea>    
+                <br>
+                <input type="submit" value="Kirim">
+            </form>
     </div>
+
     <div>
-    <h2>Jadwal Dokter</h2>
-    <table border="1" bordercolor="black" cellpadding="10" cellspacing="0">
-        <tr>
-            <td>Hari</td>
-            <td>Jam Praktik</td>
-        </tr>
-        <tr>
-            <td>Senin</td>
-            <td>08:00 - 12:00</td>
-        </tr>
-        <tr>
-            <td>Rabu</td>
-            <td>13:00 - 17:00</td>
-        </tr>
-        <tr>
-            <td>Jumat</td>
-            <td>09:00 - 11:00</td>
-    </table>
+        <h2>Jadwal Dokter</h2>
+            <table border="1" bordercolor="black" cellpadding="10" cellspacing="0">
+                <tr>
+                    <td>Hari</td>
+                    <td>Jam Praktik</td>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>08:00 - 12:00</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>13:00 - 17:00</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>09:00 - 11:00</td>
+            </table>
+    </div>
+
+    <div>
+        
     </div>
 </body>
 </html>
