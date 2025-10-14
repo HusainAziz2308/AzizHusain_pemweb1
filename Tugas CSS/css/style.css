@@ -31,6 +31,22 @@
     transition: background-color 0.3s;
 }
 
+.page-container {
+    max-width: 900px;
+    margin: 20px auto;
+    border: 3px solid #3b5998;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.banner {
+    height: 250px;
+    background-image: url('https://i.pinimg.com/736x/b5/9f/d5/b59fd5a9c1c30e4f08878e78a8538450.jpg');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #3b5998;
+}
+
 .navbar a:hover {
     background-color: #ddd;
 }
@@ -52,7 +68,35 @@
     flex: 1;
 }
 
-.page-container {
-    max-width: 900px;
-    
+.main-content {
+    display: flex;
+    min-height: 250px;
+}
+
+.content {
+    flex: 2;
+    border: 1px solid #3b5998;
+    padding: 10px;
+    background-color: #ffff;
+}
+
+.sidebar {
+    flex: 1;
+    border: 1px solid #3b5998;
+    border-left: none;
+    padding: 10px;
+    background-color: #ffff;
+}
+
+.footer {
+    background-color: #3b5998;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
 }
