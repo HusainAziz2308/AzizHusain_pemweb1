@@ -1,13 +1,26 @@
 * {
     box-sizing: border-box;
 }
+html, body {
+    height: 100%;
+    background-color: #f0f2f5; 
+}
+
+.page-container {
+    
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 40px); 
+}
+
 .header h1 {
     margin: 0;
     padding: 10px;
-    background-color: #e4e4e4;
-    border-bottom: 2px solid #3b5998;
+    background-color: #1500ff; 
     font-size: 1.5em;
-    color: #333;
+    color: white; 
 }
 
 .navbar ul {
@@ -18,7 +31,7 @@
 }
 
 .navbar li {
-    border: 1px solid #ccc;
+    border: 1px solid #a8a8a8; 
     margin-right: -1px;
 }
 
@@ -26,17 +39,13 @@
     display: block;
     padding: 8px 15px;
     text-decoration: none;
-    counter-reset: black;
+    color: black; 
     background-color: #f4f4f4;
     transition: background-color 0.3s;
 }
 
-.page-container {
-    max-width: 900px;
-    margin: 20px auto;
-    border: 3px solid #3b5998;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.navbar a:hover {
+    background-color: #ddd;
 }
 
 .banner {
@@ -44,11 +53,13 @@
     background-image: url('https://i.pinimg.com/736x/b5/9f/d5/b59fd5a9c1c30e4f08878e78a8538450.jpg');
     background-size: cover;
     background-position: center;
-    border-bottom: 1px solid #3b5998;
+    border-bottom: 1px solid #a8a8a8; 
 }
 
-.navbar a:hover {
-    background-color: #ddd;
+.main-content-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .content-label-wrapper {
@@ -56,7 +67,7 @@
 }
 
 .content-label-wrapper span {
-    padding: 5px;
+    padding: 5px; 
     font-weight: bold;
 }
 
@@ -71,31 +82,32 @@
 .main-content {
     display: flex;
     min-height: 250px;
+    flex-grow: 1; 
 }
 
 .content {
     flex: 2;
-    border: 1px solid #3b5998;
+    border: 1px solid #a8a8a8; 
     padding: 10px;
     background-color: #ffff;
 }
 
 .sidebar {
     flex: 1;
-    border: 1px solid #3b5998;
+    border: 1px solid #a8a8a8; 
     border-left: none;
     padding: 10px;
     background-color: #ffff;
 }
 
-.footer {
-    background-color: #3b5998;
+footer { 
+    background-color: #1500ff;
     color: white;
     text-align: center;
     padding: 10px 0;
+    margin-top: auto; 
 }
-
-.footer p {
+footer p {
     margin: 0;
     font-size: 0.9em;
     letter-spacing: 0.5px;
