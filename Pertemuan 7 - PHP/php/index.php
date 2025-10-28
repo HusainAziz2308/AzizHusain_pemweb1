@@ -25,6 +25,9 @@
     $TotalPembayaran = $TotalHutang + $TotalBungaHutang;
     $SisaPemasukan = $Pemasukan - $TotalPembayaran;
 
+    echo "Pemasukan: Rp " . number_format($Pemasukan, 0, ',', '.') . "<br>";
+    echo "Hutang A: Rp " . number_format($HutangA, 0, ',', '.') . " dengan bunga " . ($BungaHutangA * 100) . "%<br>";
+    echo "Hutang B: Rp " . number_format($HutangB, 0, ',', '.') . " dengan bunga " . ($BungaHutangB * 100) . "%<br><br>";
     echo "Total Hutang: Rp " . number_format($TotalHutang, 0, ',', '.') . "<br>";
     echo "Total Bunga Hutang: Rp " . number_format($TotalBungaHutang, 0, ',', '.') . "<br>";
     echo "Total Pembayaran: Rp " . number_format($TotalPembayaran, 0, ',', '.') . "<br>";
