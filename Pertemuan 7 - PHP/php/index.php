@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Perhitungan Keuangan Detail</title>
 </head>
-
 <body>
+    <h1>Laporan Perhitungan Keuangan</h1>
     <?php
-    $Pemasukan = 50000000;
-    $HutangA = 16000000;
-    $BungaHutangA = 0.05;
-    $HutangB = 9500000;
-    $BungaHutangB = 0.045;
+        // Data Input
+        $Pemasukan = 50000000;
+        $HutangA = 16000000;
+        $BungaHutangA_rate = 5 / 100; // 0.05
+        $HutangB = 9500000;
+        $BungaHutangB_rate = 4.5 / 100; // 0.045
 
-    // Menghitung total bunga hutang
-    $TotalBungaHutangA = $HutangA * $BungaHutangA;
-    $TotalBungaHutangB = $HutangB * $BungaHutangB;
+        // 1. Menghitung Bunga Masing-Masing Hutang
+        $TotalBungaHutangA = $HutangA * $BungaHutangA_rate; // 16.000.000 * 0.05 = 800.000
+        $TotalBungaHutangB = $HutangB * $BungaHutangB_rate; // 9.500.000 * 0.045 = 427.500
 
-    // Menghitung total
-    $TotalHutang = $HutangA + $HutangB;
-    $TotalBungaHutang = $TotalBungaHutangA + $TotalBungaHutangB;
-    $TotalPembayaran = $TotalHutang + $TotalBungaHutang;
-    $SisaPemasukan = $Pemasukan - $TotalPembayaran;
+        // 2. Menghitung Total
+        $TotalHutang = $HutangA + $HutangB; // 25.500.000
+        $TotalBungaHutang = $TotalBungaHutangA + $TotalBungaHutangB; // 800.000 + 427.500 = 1.227.500
+        $TotalPembayaran = $TotalHutang + $TotalBungaHutang; // 26.727.500
+        $SisaPemasukan = $Pemasukan - $TotalPembayaran; // 50.000.000 - 26.727.500 = 23.272.500
 
-    echo "Pemasukan: Rp " . number_format($Pemasukan, 0, ',', '.') . "<br>";
-    echo "Hutang A: Rp " . number_format($HutangA, 0, ',', '.') . " dengan bunga " . ($BungaHutangA * 100) . "%<br>";
-    echo "Hutang B: Rp " . number_format($HutangB, 0, ',', '.') . " dengan bunga " . ($BungaHutangB * 100) . "%<br><br>";
-    echo "Total Hutang: Rp " . number_format($TotalHutang, 0, ',', '.') . "<br>";
-    echo "Total Bunga Hutang: Rp " . number_format($TotalBungaHutang, 0, ',', '.') . "<br>";
-    echo "Total Pembayaran: Rp " . number_format($TotalPembayaran, 0, ',', '.') . "<br>";
-    echo "Sisa Pemasukan Setelah Pembayaran Hutang: Rp " . number_format($SisaPemasukan, 0, ',', '.') . "<br>";
+        // Output
+        echo "<h2>Ringkasan Data</h2>";
+        echo "Pemasukan Total: **Rp " . number_format($Pemasukan, 0, ',', '.') . "**<br>";
+        echo "<hr>";
+
+        echo "Hutang A (Pokok): Rp " . number_format($HutangA, 0, ',', '.') . " | Bunga (" . ($BungaHutangA_rate * 100) . "%): **Rp " . number_format($TotalBungaHutangA, 0, ',', '.') . "**<br>";
+        echo "Hutang B (Pokok): Rp " . number_format($HutangB, 0, ',', '.') . " | Bunga (" . ($BungaHutangB_rate * 100) . "%): **Rp " . number_format($TotalBungaHutangB, 0, ',', '.') . "**<br>";
+        echo "<hr>";
+
+        echo "<h2>Hasil Perhitungan</h2>";
+        echo "Total Pokok Hutang: **Rp " . number_format($TotalHutang, 0, ',', '.') . "**<br>";
+        echo "Total Bunga Hutang (A + B): **Rp " . number_format($TotalBungaHutang, 0, ',', '.') . "**<br>";
+        echo "Total Pembayaran (Pokok + Bunga): **Rp " . number_format($TotalPembayaran, 0, ',', '.') . "**<br>";
+        echo "<h3>Sisa Pemasukan</h3>";
+        echo "Sisa Pemasukan: **Rp " . number_format($SisaPemasukan, 0, ',', '.') . "**<br>";
     ?>
 </body>
-
 </html>
