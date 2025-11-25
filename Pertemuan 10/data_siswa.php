@@ -37,8 +37,6 @@
         <td><?php echo $d['agama']; ?></td>
         <td><?php echo $d['asal_sekolah']; ?></td>
         <td>
-            <a href="edit_siswa.php?id=<?php echo $d['id']; ?>">Edit</a> 
-            |
             <a href="hapus.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Yakin?')">Hapus</a>
         </td>
     </tr>
