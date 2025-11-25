@@ -9,7 +9,7 @@
 </head>
 <body>
     <h2>Data Siswa</h2>
-    <a href="tambah_siswa.php">+ Tambah Siswa Baru</a>
+    <a href="tambah_siswa.php" style="border: 1px; border-radius: 8px;">+ Tambah Siswa Baru</a>
     <br><br>
     
     <table border="1" cellpadding="10" cellspacing="0">
