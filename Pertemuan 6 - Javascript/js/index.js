@@ -21,5 +21,7 @@ function hitungStatus() {
         kelasStatus = 'tidak-lulus';
     }
 
+    hasil.innerHTML = `<p>Rata-rata Nilai: ${rataRata.toFixed(2)} - Status: ${statusKelulusan}</p>`;
+    hasil.className = kelasStatus;
     
 }
