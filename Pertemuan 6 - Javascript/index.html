@@ -1,46 +1,84 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TM6 - Husain Aziz Al Rosyid</title>
-    <style>
-       body{
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 20px;
-       }
-       input, button {
-        margin: 5px;
-        padding: 10px;
-       }
-       #hasil {
-        margin-top: 20px;
-        font-weight: bold;
-        color: blue;
-       }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TM6 - Husain Aziz Al Rosyid</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    input {
+      align-items: center;
+      border: 2px solid #03045e;
+      border-radius: 8%;
+      margin: 5px;
+      padding: 10px;
+      width: 90%;
+    }
+    button {
+      align-items: center;
+      background-color: #030067;
+      color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+    }
+
+    button:hover {
+      background-color: #023e8a;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      margin: auto;
+    }
+
+    #hasil {
+      margin-top: 20px;
+      font-weight: bold;
+      color: blue;
+    }
+  </style>
 </head>
+
 <body>
 
-    <div class="container">
-        <h1>Cek Status Kelulusan</h1>
+  <div class="container">
+    <h1>Cek Status Kelulusan</h1>
 
-        <label for="nilaiTeori">Nilai Teori:</label>
-        <input type="number" id="nilaiTeori" min="0" max="100" placeholder="Masukkan nilai teori (0-100)">
-        <br>
-        <label for="nilaiPraktik">Nilai Praktik:</label>
-        <input type="number" id="nilaiPraktik" min="0" max="100" placeholder="Masukkan nilai praktik (0-100)">
-        <br>
-        <button onclick="hitungStatus()">Cek Status</button>
+    <label for="nilaiTeori">Nilai Teori</label>
+    <br>
+    <input type="number" id="nilaiTeori" min="0" max="100" placeholder="Masukkan nilai teori (0-100)">
+    <br>
+    <label for="nilaiPraktik">Nilai Praktik</label>
+    <br>
+    <input type="number" id="nilaiPraktik" min="0" max="100" placeholder="Masukkan nilai praktik (0-100)">
+    <br>
+    <button onclick="hitungStatus()">Cek Status</button>
 
-        <div id="hasil">
-            <p>Masukkan nilai untuk melihat hasilnya.</p>
-        </div>
+    <div id="hasil">
+      <p>Masukkan nilai untuk melihat hasilnya.</p>
     </div>
+  </div>
 
-    <script src="js/index.js"></script>
+  <script src="js/index.js"></script>
 
 </body>
+
 </html>

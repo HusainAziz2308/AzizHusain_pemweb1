@@ -21,14 +21,7 @@ function hitungStatus() {
         kelasStatus = 'tidak-lulus';
     }
 
-    hasilElement.innerHTML = '
-        <p>Nilai Teori: <strong>${nilaiTeori}</strong></p>
-        <p>Nilai Praktik: <strong>${nilaiPraktik}</strong></p>
-        <hr>
-        <p>Rata-Rata: <strong>${rataRata.toFixed(2)}</strong></p>
-        <p>Status: <span class="${kelasStatus}">${statusKelulusan}</span></p>
-        `;
-
-    // Opsional: Atur kelas container hasil untuk tampilan dinamis (jika diperlukan)
-    hasilElement.className = kelasStatus;
+    hasil.innerHTML = `<p>Rata-rata Nilai: ${rataRata.toFixed(2)} - Status: ${statusKelulusan}</p>`;
+    hasil.className = kelasStatus;
+    
 }
