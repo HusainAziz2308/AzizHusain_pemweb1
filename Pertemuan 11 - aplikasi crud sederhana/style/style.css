@@ -1,0 +1,39 @@
+nav {
+    width: 100%;
+    border-bottom: 5px solid #000000;
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.judul {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+
+.menu li a {
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000000;
+    padding-right: 10px;
+}
+
+.menu li a:hover {
+    border-bottom: 2px solid #000000;
+}
+
+.menu li a #active {
+    font-weight: 700;
+    border-bottom: 2px solid #000000;
+}
