@@ -1,9 +1,10 @@
 <?php
-    include 'config/koneksi.php';
+include 'config/koneksi.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <title>Sistem Informasi Sekolah</title>
@@ -12,29 +13,37 @@
         body {
             font-family: Arial, sans-serif;
         }
+
         table {
             width: 80%;
             margin-top: 20px;
             border-collapse: collapse;
         }
-        table, th, td {
+
+        table,
+        th,
+        td {
             border: 1px solid black;
         }
-        th, td {
+
+        th,
+        td {
             padding: 10px;
             text-align: left;
         }
+
         th {
             background-color: #f2f2f2;
         }
     </style>
 </head>
+
 <body>
-    
+
     <nav>
         <div class="judul">Data Siswa Sekolah</div>
         <ul class="menu">
-            <li><a id="active" href="index.php">Home</a></li>
+            <li><a class="active" href="index.php">Home</a></li>
             <li><a href="admin.php">admin</a></li>
         </ul>
     </nav>
@@ -52,12 +61,12 @@
             <?php
             $query = "SELECT * FROM siswa ORDER BY nis ASC";
             $result = mysqli_query($koneksi, $query);
-            if(!$result){
-                die("Query Error: ".mysqli_errno($koneksi)." - ".mysqli_error($koneksi));
+            if (!$result) {
+                die("Query Error: " . mysqli_errno($koneksi) . " - " . mysqli_error($koneksi));
             }
 
             $no = 1;
-            while($row = mysqli_fetch_assoc($result)) {
+            while ($row = mysqli_fetch_assoc($result)) {
             ?>
                 <tr>
                     <td><?php echo $no; ?></td>
@@ -73,4 +82,5 @@
     </table>
 
 </body>
+
 </html>
