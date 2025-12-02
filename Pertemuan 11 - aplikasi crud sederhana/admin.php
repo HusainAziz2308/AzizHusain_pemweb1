@@ -97,8 +97,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ?>
 
     <div class="admin">
+        <h2>Menu Admin</h2>
         <ul class="admin-menu">
-            <li><a class="nav-link" href="admin.php">Lihat Data</a> |</li>
+            <li><a class="nav-link" href="admin.php">Lihat Data</a></li>
             <li><a class="nav-link" href="admin.php?action=tambah">Tambah Data Baru</a></li>
         </ul>
     </div>
